@@ -1,0 +1,48 @@
+{
+    "name": "alexandergw/deft-project",
+    "description": "Start a web project using Deft framework",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Alexander Gailey-White",
+            "email": "me@agw.ai"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../deft"
+        }
+    ],
+    "require": {
+        "alexandergw/deft": "*",
+        "composer/installers": "^1.9",
+        "wikimedia/composer-merge-plugin": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Deft\\Plugin\\": "plugin/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "installer-paths": {
+            "plugin/{$name}": ["type:deft-plugin"],
+            "locale/{$name}": ["type:deft-locale"]
+        },
+        "merge-plugin": {
+            "include": [
+                "vendor/alexandergw/deft/composer.json"
+            ],
+            "recurse": false,
+            "replace": false,
+            "merge-extra": false,
+            "merge-dev": true
+        }
+    }
+}
