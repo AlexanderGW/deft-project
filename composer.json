@@ -9,12 +9,6 @@
             "email": "me@agw.ai"
         }
     ],
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../deft"
-        }
-    ],
     "require": {
         "alexandergw/deft": "*",
         "composer/installers": "^1.9",
