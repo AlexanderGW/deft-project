@@ -30,7 +30,7 @@ $config = [
   'debug' => 3,
 
   // Storage path for logs, debug JSON stacks, etc
-  'path.storage' => '../storage'
+  'path.storage' => sys_get_temp_dir()
 ];
 
 // Attempt to include a Deft configuration parameters
