@@ -18,7 +18,7 @@
     "require": {
         "alexandergw/deft": "*",
         "composer/installers": "^1.9",
-        "wikimedia/composer-merge-plugin": "^1.4"
+        "wikimedia/composer-merge-plugin": "^2.0"
     },
     "autoload": {
         "psr-4": {
@@ -28,7 +28,11 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "wikimedia/composer-merge-plugin": true
+        }
     },
     "extra": {
         "installer-paths": {
